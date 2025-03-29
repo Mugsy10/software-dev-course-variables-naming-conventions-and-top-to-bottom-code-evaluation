@@ -24,9 +24,16 @@ Things to reflect on:
   
 */
 
-let a = "Alice";
-let b = 5;
-let c = 20;
-let d = a + " bought " + b + " items for $" + c + ".";
+// Customer purchase summary
 
-console.log(d);
+let customerName = "Alice";
+let numberOfItems = 5;
+let totalCost = 20;
+
+let costPerItem = totalCost / numberOfItems;  // Enhancement #1
+let purchaseSummary = customerName + " bought " + numberOfItems + " items for $" + totalCost + ".";
+
+console.log(purchaseSummary);
+
+// Enhancement #2: Add a breakdown of the cost per item
+console.log("Each item cost $" + costPerItem.toFixed(2));
